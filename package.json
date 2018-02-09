@@ -5,9 +5,11 @@
   "dependencies": {
     "axios": "^0.17.1",
     "bootstrap": "^4.0.0",
+    "fixed-data-table-2": "^0.8.10",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.0",
+    "react-smart-data-table": "^0.5.1",
     "reactstrap": "^5.0.0-beta",
     "semantic-ui-css": "^2.2.14",
     "semantic-ui-react": "^0.78.2"

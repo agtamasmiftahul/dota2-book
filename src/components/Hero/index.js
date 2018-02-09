@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import axios from 'axios'
 
 import 'semantic-ui-css/semantic.min.css';
 import {
@@ -9,68 +8,51 @@ import {
   Image
 } from 'semantic-ui-react'
 
-const API_URL = 'https://api.opendota.com'
-
 export default class Heroes extends Component {
-  state = {
-    heroes: []
-  }
-
-  componentDidMount() {
-    axios.get(`${API_URL}/api/heroStats`)
-      .then(res => {
-        const heroes = res.data;
-        this.setState({ heroes });
-      })
-  }
-
   render() {
+    const { img, name, type, health, mana, str, agi, int, speed } = this.props
     return (
-      <Grid centered columns={4} padded>
-          { this.state.heroes.map(hero =>
           <Grid.Column>
             <Card fluid>
-                <Image src={`${API_URL}${hero.img}`}/>
+                <Image src={ img }/>
                 <Card.Content>
                   <Card.Header textAlign='center'>
-                    { hero.localized_name }
+                    { name }
                   </Card.Header>
                   <Card.Meta textAlign='center'>
-                    { hero.attack_type }
+                    { type }
                   </Card.Meta>
                   <Card.Description>
                     <p>
                       <Icon name='heartbeat'/>
-                      <b>health</b> { hero.base_health }
+                      <b>health</b> { health }
                     </p>
                     <p>
                       <Icon name='wizard'/>
-                      <b>mana</b> { hero.base_mana }
+                      <b>mana</b> { mana }
                     </p>
                     <p>
                       <Icon name='protect'/>
-                      <b>strength</b> { hero.base_str }
+                      <b>strength</b> { str }
                     </p>
                     <p>
                       <Icon name='star'/>
-                      <b>agility</b> { hero.base_agi }
+                      <b>agility</b> { agi }
                     </p>
                     <p>
                       <Icon name='thumbs up'/>
-                      <b>intelligence</b> { hero.base_int }
+                      <b>intelligence</b> { int }
                     </p>
                   </Card.Description>
                 </Card.Content>
                 <Card.Content extra>
                   <p>
                     <Icon name='paw'/>
-                    { hero.move_speed }
+                    { speed }
                   </p>
                 </Card.Content>
             </Card>
           </Grid.Column>
-          ) }
-      </Grid>
     )
   }
 }
