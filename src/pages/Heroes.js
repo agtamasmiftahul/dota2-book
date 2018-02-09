@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Grid } from 'semantic-ui-react'
 
-import Heroes from '../components/Hero'
+import Heroes from '../components/Hero/Card-content'
 
 const API_URL = 'https://api.opendota.com'
 
