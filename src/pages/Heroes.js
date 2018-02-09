@@ -21,7 +21,7 @@ export default class HeroesPage extends Component {
 
   render() {
     return (
-      <Grid centered columns={4} padded>
+      <Grid centered columns={5} padded>
           { this.state.heroes.map(hero =>
             <Heroes
               img={`${API_URL}${hero.img}`}
