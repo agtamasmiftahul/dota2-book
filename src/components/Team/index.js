@@ -11,13 +11,13 @@ import {
 
 const API_URL = 'https://api.opendota.com'
 
-export default class Heroes extends Component {
+export default class Team extends Component {
   state = {
     heroes: []
   }
 
   componentDidMount() {
-    axios.get(`${API_URL}/api/heroStats`)
+    axios.get(`${API_URL}/api/teams`)
       .then(res => {
         const heroes = res.data;
         this.setState({ heroes });
