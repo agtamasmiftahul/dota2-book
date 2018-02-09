@@ -10,7 +10,8 @@ export default class Description extends Component {
       mana,
       str,
       agi,
-      int
+      int,
+      speed
     } = this.props
 
     return (
@@ -39,6 +40,11 @@ export default class Description extends Component {
           icon='thumbs up'
           text='intelligence'
           value={int}
+        />
+        <Item
+          icon='paw'
+          text='speed'
+          value={speed}
         />
       </Card.Description>
     )

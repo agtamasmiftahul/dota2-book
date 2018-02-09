@@ -4,13 +4,14 @@ import 'semantic-ui-css/semantic.min.css';
 import {
   Grid,
   Card,
-  Image
+  Image,
 } from 'semantic-ui-react'
 
 import Header from './header'
 import Meta from './meta'
 import Description from './description'
 import Item from './item'
+import ButtonDetail from './button-detail'
 
 export default class CardContent extends Component {
   render() {
@@ -39,14 +40,11 @@ export default class CardContent extends Component {
               str = {str}
               agi = {agi}
               int = {int}
+              speed = {speed}
             />
           </Card.Content>
           <Card.Content extra>
-            <Item
-              text='speed'
-              icon='paw'
-              value={speed}
-            />
+          <ButtonDetail text='Detail' icon='right arrow'/>
           </Card.Content>
         </Card>
       </Grid.Column>
