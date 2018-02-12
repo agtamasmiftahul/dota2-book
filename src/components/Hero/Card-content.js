@@ -10,8 +10,6 @@ import {
 import Header from './header'
 import Meta from './meta'
 import Description from './description'
-import Item from './item'
-import ButtonDetail from './button-detail'
 import HeroDetail from '../HeroStats/Detail-content'
 
 export default class CardContent extends Component {
@@ -45,7 +43,7 @@ export default class CardContent extends Component {
             />
           </Card.Content>
           <Card.Content extra>
-          <HeroDetail />
+            <HeroDetail />
           </Card.Content>
         </Card>
       </Grid.Column>
