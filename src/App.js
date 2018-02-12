@@ -8,17 +8,20 @@ import {
 import Heroes from './pages/Heroes'
 import Teams from './pages/Teams'
 import Navigation from './components/Navigation/Nav-content'
+import Home from './pages/Home'
+
+import './lib/css/style.css'
 
 export default class App extends Component {
   render() {
     return (
       <Router>
       <Grid centered columns={1}>
-        <Grid.Column>
+        <Grid.Column className='paddingBottom'>
           <Navigation />
         </Grid.Column>
-        <Grid.Column>
-          <Route exact path='/' component={Heroes}/>
+        <Grid.Column className='paddingTop'>
+          <Route exact path='/' component={Home}/>
           <Route path='/hero' component={Heroes}/>
           <Route path='/team' component={Teams}/>
         </Grid.Column>
